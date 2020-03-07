@@ -1,0 +1,139 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <style>
+      body {
+        border-radius: 4px;
+      }
+
+      #popup {
+        width: 15rem;
+        height: 8.5rem;
+      }
+
+      .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        height: 36px;
+        outline: none;
+        background: #E30413;
+        color: #FFFFFF;
+        border-radius: 4px;
+        width: 150px;
+        font-weight: bold;
+        border: none;
+        font-size: 15px;
+      }
+
+      #stopButton:hover,
+      #startButton:hover {
+        opacity: 0.75;
+        cursor: pointer;
+      }
+
+      #loadingButton {
+        position: relative;
+      }
+
+      #stopButton {
+        text-decoration: underline;
+        font-weight: 400;
+        font-size: 0.75rem;
+        margin-top: 0.75rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .red {
+        color: #E30413;
+      }
+
+      h1 {
+        margin: 0;
+        margin-top: 0.5rem;
+      }
+
+      p {
+        margin-top: 2px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Loading animation container */
+      .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 28px;
+        height: 28px;
+        margin: -14px 0 0 -14px;
+      }
+
+      /* Spinning circle (inner circle) */
+      .loading .maskedCircle {
+        width: 20px;
+        height: 20px;
+        border-radius: 12px;
+        border: 3px solid white;
+      }
+
+      /* Spinning circle mask */
+      .loading .mask {
+        width: 12px;
+        height: 12px;
+        overflow: hidden;
+      }
+
+      /* Spinner */
+      .loading .spinner {
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        width: 26px;
+        height: 26px;
+        animation: spin 1s infinite linear;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="popup">
+      <div class="main-content">
+        <h1>Unsre <span class="red">Liebe</span></h1>
+        <p id="tagline">Ticket finder</p>
+        <button id="startButton">Get Me Tickets</button>
+        <button id="loadingButton" class="hidden">
+          <div class="loading">
+            <div class="spinner">
+              <div class="mask">
+                <div class="maskedCircle">
+                </div>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <p id="stopButton" class="hidden">Stop</p>
+      <script src="popup.js"></script>
+    </div>
+  </body>
+
+  </html>
