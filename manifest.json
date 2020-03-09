@@ -1,7 +1,7 @@
 {
   "name": "Virtual Frank",
   "version": "1.0",
-  "description": "Your Union Ticket Companion",
+  "description": "Ticket Finder",
   "permissions": ["activeTab", "declarativeContent", "storage", "unlimitedStorage"],
   "background": {
     "scripts": ["background.js"],
