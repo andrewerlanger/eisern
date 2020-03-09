@@ -1,7 +1,7 @@
 {
-  "name": "Unsre Liebe",
+  "name": "Virtual Frank",
   "version": "1.0",
-  "description": "Ticket Notifications",
+  "description": "Your Union Ticket Companion",
   "permissions": ["activeTab", "declarativeContent", "storage", "unlimitedStorage"],
   "background": {
     "scripts": ["background.js"],
