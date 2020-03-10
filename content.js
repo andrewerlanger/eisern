@@ -33,7 +33,8 @@ var linkHelper = {
     this.selectTicket();
   },
   selectTicket: function() {
-    var ticketContainer = document.querySelector(".KartentypZeile");
+    // var ticketContainer = document.querySelector(".KartentypZeile");
+    var ticketContainer = document.querySelectorAll(".BuchungsanzahlFordergrund")[3];
     ticketContainer.querySelectorAll("div.BGNr").forEach(ticket => {
       ticket.innerText == "1" && ticket.click();
     });
