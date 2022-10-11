@@ -4,11 +4,10 @@
   "description": "Ticket Finder",
   "permissions": ["activeTab", "declarativeContent", "storage", "unlimitedStorage"],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": true
+    "service_worker": "background.js"
   },
   "content_scripts": [{
-    "matches": ["https://*.union-zeughaus.de/union-berlin/*"],
+    "matches": ["https://tickets.union-zeughaus.de/*"],
     "js": ["content.js"]
   }],
   "browser_action": {
@@ -26,5 +25,5 @@
     "48": "assets/logo_48.png",
     "128": "assets/logo_128.png"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
